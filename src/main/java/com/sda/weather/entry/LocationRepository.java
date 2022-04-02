@@ -2,5 +2,5 @@ package com.sda.weather.entry;
 
 public interface LocationRepository {
 
-    Location save (Location location);
+    Location saveLocation (Location location);
 }

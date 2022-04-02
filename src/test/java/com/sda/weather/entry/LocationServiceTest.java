@@ -21,7 +21,7 @@ public class LocationServiceTest {
     @Test
     void createLocation_whenDataIsProper_returnsNewObject() {
         //when
-        Location result = locationService.createLocation("Lodz", "Polska");
+        Location result = locationService.createLocation(" Uc ", "Polska", 14D, 150D);
         //then
         assertThat(result).isNotNull();
     }
@@ -29,7 +29,7 @@ public class LocationServiceTest {
     @Test
     void createLocation_whenLocationIsEmpty_throwsAnException() {
         // when
-        Throwable result = catchThrowable(() -> locationService.createLocation("   ", "Polska"));
+        Throwable result = catchThrowable(() -> locationService.createLocation("   ", "  ", 14D, 150D));
         // then
         assertThat(result).isExactlyInstanceOf(IllegalArgumentException.class);
     }

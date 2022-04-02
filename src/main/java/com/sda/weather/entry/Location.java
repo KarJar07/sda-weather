@@ -19,10 +19,10 @@ public class Location {
     private Double longitude;
     private Double latitude;
 
-    public Location(String city, String country) {
+    public Location(String city, String country, Double longitude, Double latitude) {
         this.city = city;
         this.country = country;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        this.longitude = this.longitude;
+        this.latitude = this.latitude;
     }
 }

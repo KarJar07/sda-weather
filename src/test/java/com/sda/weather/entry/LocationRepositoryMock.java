@@ -4,7 +4,7 @@ public class LocationRepositoryMock implements LocationRepository{
 
 
     @Override
-    public Location save(Location location) {
+    public Location saveLocation(Location location) {
         location.setId(1L);
         return location;
     }

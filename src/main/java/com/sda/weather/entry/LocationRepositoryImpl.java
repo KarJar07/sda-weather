@@ -12,7 +12,7 @@ public class LocationRepositoryImpl implements LocationRepository { // todo rena
     }
 
     @Override
-    public Location save(Location location) {
+    public Location saveLocation(Location location) {
         return null;
     }
 }
