@@ -11,8 +11,6 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class WeatherApplication {
-//    public static void main(String[] args) {
-//        System.out.println("Hello World ");
 
     public static void main(String[] args) {
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
@@ -25,12 +23,11 @@ public class WeatherApplication {
 
         ObjectMapper objectMapper = new ObjectMapper();
         LocationRepository locationRepository = new LocationRepositroyImpl(sessionFactory);
-        LocationService locationService = new LocationService (locationRepository, objectMapper);
-        LocationController locationController = new LocationController (objectMapper, locationService);
+        LocationService locationService = new LocationService(locationRepository, objectMapper);
+        LocationController locationController = new LocationController(objectMapper, locationService);
         UserInterface userInterface = new UserInterface(locationController);
 
         userInterface.run();
     }
-
-    }
+}
 

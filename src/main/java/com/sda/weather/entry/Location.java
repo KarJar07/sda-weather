@@ -8,8 +8,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
-@Table (name = "location")
-
+@Table(name = "location")
 public class Location {
 
     @Id
