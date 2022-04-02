@@ -3,7 +3,7 @@ package com.sda.weather;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sda.weather.entry.LocationController;
 import com.sda.weather.entry.LocationRepository;
-import com.sda.weather.entry.LocationRepositroyImpl;
+import com.sda.weather.entry.LocationRepositoryImpl;
 import com.sda.weather.entry.LocationService;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -22,12 +22,13 @@ public class WeatherApplication {
                 .buildSessionFactory();
 
         ObjectMapper objectMapper = new ObjectMapper();
-        LocationRepository locationRepository = new LocationRepositroyImpl(sessionFactory);
+        LocationRepository locationRepository = new LocationRepositoryImpl(sessionFactory);
         LocationService locationService = new LocationService(locationRepository, objectMapper);
         LocationController locationController = new LocationController(objectMapper, locationService);
         UserInterface userInterface = new UserInterface(locationController);
 
         userInterface.run();
     }
+
 }
 

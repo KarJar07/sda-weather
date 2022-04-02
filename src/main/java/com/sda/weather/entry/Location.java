@@ -19,8 +19,7 @@ public class Location {
     private Double longitude;
     private Double latitude;
 
-    public Location(long id, String city, String country, Double longitude, Double latitude) {
-        this.id = id;
+    public Location(String city, String country) {
         this.city = city;
         this.country = country;
         this.longitude = longitude;
